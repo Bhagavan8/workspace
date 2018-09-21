@@ -1,0 +1,26 @@
+package SimpleAudioPlayer;
+
+//package com.javacodegeeks.snippets.core;
+
+import java.applet.Applet;
+import java.applet.AudioClip;
+import java.awt.Graphics;
+
+public class AudioPlayer extends Applet {
+	
+	private static final long serialVersionUID = 2530894095587089544L;
+	
+	private AudioClip clip;
+    public void init() {
+    	
+    	clip = getAudioClip(getDocumentBase(), "[iSongs.info] 02 - Devatha.mp3");
+    	
+    }
+    public void paint(Graphics g) {
+    	clip.play();
+    	clip.stop();
+    	clip.loop();
+    	
+    }
+
+}

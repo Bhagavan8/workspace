@@ -1,0 +1,19 @@
+import javax.swing.*;
+import java.awt.*;
+ 
+public class TextToSpeech {
+    JFrame frame;//Crating object of JFrame class
+    TextToSpeech(){
+        prepareGUI();
+    }
+    public void prepareGUI(){
+        frame=new JFrame();
+        frame.setTitle("Text to Speech");//Setting title 
+        frame.getContentPane().setLayout(null);//Setting Layout
+        frame.getContentPane().setBackground(Color.black);//Setting Background Color
+        frame.setSize(350,350);//Setting Size
+        frame.setLocationRelativeTo(null);//Setting location
+        frame.setVisible(true);//Setting visibility
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Setting default Close Operationg
+    }
+}

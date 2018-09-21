@@ -1,0 +1,16 @@
+package Strings;
+
+public class StringTest {
+public static void main(String[] args) {
+	String str1="Bhagavan";
+	String str2="felight";
+	String str3="felight";
+	if(str2==str3){
+		System.out.println("true");
+	}else{
+		System.out.println("false");
+	}
+	
+	
+}
+}

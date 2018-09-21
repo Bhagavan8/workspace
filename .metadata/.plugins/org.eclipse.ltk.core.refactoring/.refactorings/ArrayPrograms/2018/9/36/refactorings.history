@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Inline local variable &apos;arrays.ReverseArray.main().ch&apos; in &apos;arrays.ReverseArray.main()&apos;&#x0D;&#x0A;- Original project: &apos;ArrayPrograms&apos;&#x0D;&#x0A;- Original element: &apos;arrays.ReverseArray.main().ch&apos;" description="Inline local variable &apos;ch&apos;" id="org.eclipse.jdt.ui.inline.temp" input="/src&lt;arrays{ReverseArray.java" selection="206 16" stamp="1536221999101" version="1.0"/>
+</session>

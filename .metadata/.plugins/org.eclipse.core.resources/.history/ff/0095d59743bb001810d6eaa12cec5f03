@@ -1,0 +1,5 @@
+package database.connections;
+
+public class CreateDatabase {
+
+}

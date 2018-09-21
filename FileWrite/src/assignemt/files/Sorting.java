@@ -1,0 +1,86 @@
+package assignemt.files;
+import java.util.Scanner;
+public class Sorting
+{
+    private static Scanner scan;
+	private static char ch;
+	private static int arrs[];
+
+	public static void main(String args[])
+    {
+        char choice;
+        System.out.println("enter the elements");
+		scan = new Scanner(System.in);
+		
+        do
+        {
+        	
+        	
+            System.out.print("1. Bubble sort\n");
+            System.out.print("2. Selection Sort\n");
+           // System.out.print("3. Merge sort\n");
+            //System.out.print("3. Heap Sort\n");
+           // System.out.print("5. Quick Sort\n\n");
+            System.out.print("Enter Your Choice : ");
+            System.out.println("4.exit");
+            choice = scan.next().charAt(0);
+            arrs = null;
+           
+            
+            	switch(choice)
+            	
+            {
+                case '1' :
+                int n = arrs.length;
+                for (int i = 0; i < n-1; i++)
+                    for (int j = 0; j < n-i-1; j++)
+                        if (arrs[j] > arrs[j+1])
+                        {
+                            // swap temp and arr[i]
+                            int temp = arrs[j];
+                            arrs[j] = arrs[j+1];
+                            arrs[j+1] = temp;
+                        }
+            
+                    break;
+            
+               case '2' : 
+            	    n = arrs.length;
+
+               // One by one move boundary of unsorted subarray
+               for (int i = 0; i < n-1; i++)
+               {
+                   // Find the minimum element in unsorted array
+                   int min_idx = i;
+                   for (int j = i+1; j < n; j++)
+                       if (arrs[j] < arrs[min_idx])
+                           min_idx = j;
+
+                   // Swap the found minimum element with the first
+                   // element
+                   int temp = arrs[min_idx];
+                   arrs[min_idx] = arrs[i];
+                   arrs[i] = temp;
+               }
+                    break;
+                
+            
+                case '5' : System.exit(0);
+                    break;
+                default : System.out.print("Wrong Choice!!!");
+                    break;
+        }
+        }
+        while(choice != 4);
+        
+    }
+
+	public static char getCh() {
+		return ch;
+	}
+
+	public static void setCh(char ch) {
+		Sorting.ch = ch;
+	}
+}
+

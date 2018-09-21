@@ -1,0 +1,41 @@
+package assignemt.files;
+
+	import java.io.*; 
+	  
+	public class FileMerge  
+	{ 
+	    public static void main(String[] args) throws IOException  
+	    {
+	        PrintWriter pw = new PrintWriter("D:Validmail.txt"); 
+	        PrintWriter pw1 =new PrintWriter("D:InvalidEmail.txt");
+	        BufferedReader br1 = new BufferedReader(new FileReader("D:Email.txt")); 
+	        String line1 = br1.readLine(); 
+	        String line2 = br1.readLine(); 
+	        while (line1 != null || line2 !=null) 
+	        { 
+	            if(line1 != null) 
+	            { 
+	                pw.println(line2); 
+	                pw1.println(line2);
+	                
+	                line1 = br1.readLine(); 
+	                line2 = br1.readLine();
+	            } 
+	              
+	            if(line2 != null) 
+	            { 
+	                pw.println(line2);
+	                pw1.println(line2);
+	            } 
+	        } 
+	      
+	        pw.flush(); 
+	        pw1.flush();
+	        br1.close(); 
+	        pw.close(); 
+	        pw1.close();
+	          
+	        System.out.println("Succcessfully copied"); 
+	    } 
+	} 
+	

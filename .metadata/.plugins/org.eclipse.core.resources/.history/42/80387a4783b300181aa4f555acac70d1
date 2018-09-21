@@ -1,0 +1,18 @@
+package collections;
+
+import java.util.ArrayList;
+
+public class CollectionListDemo {
+	public static void main(String[] args) {
+		@SuppressWarnings("rawtypes")
+		ArrayList<Comparable> mylist =new ArrayList<Comparable>();
+		mylist.add("bhagavan");
+		mylist.add(1000);
+		mylist.add(true);
+		System.out.println(mylist.get(2));
+		
+		
+		
+	}
+
+}

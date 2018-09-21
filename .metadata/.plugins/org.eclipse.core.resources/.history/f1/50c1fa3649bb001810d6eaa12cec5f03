@@ -1,0 +1,40 @@
+package SimpleAudioPlayer;
+
+import javax.media.*;
+import java.io.*;
+import java.util.*;
+class AudioPlay
+{
+ private static Scanner s;
+
+public static void main(String args[]) throws Exception
+ {
+
+
+ // Take the path of the audio file from command line
+ File f=new File("0Zindagi Se-.mp3");
+
+
+ // Create a Player object that realizes the audio
+ final Player p=Manager.createRealizedPlayer(f.toURI().toURL());
+
+
+  // Start the music
+  p.start();
+
+
+  // Create a Scanner object for taking input from cmd
+  s = new Scanner(System.in);
+
+
+  // Read a line and store it in st
+  String st=s.nextLine();
+
+
+   // If user types 's', stop the audio
+   if(st.equals("s"))
+   {
+   p.stop();
+   }
+ }
+}

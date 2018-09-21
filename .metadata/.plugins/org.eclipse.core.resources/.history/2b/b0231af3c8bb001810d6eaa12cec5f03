@@ -1,0 +1,46 @@
+package assignemt.files;
+import javax.swing.*;
+import java.awt.*;
+ 
+public class TextToSpeech {
+	JFrame frame;
+    JTextArea textArea=new JTextArea();//Creating object of JTextArea
+    JButton speakButton =new JButton("Speak");//Creating object of JButton
+    JButton clearButton =new JButton("Clear");
+    TextToSpeech(){
+        prepareGUI();
+        addComponents();
+    }
+    public void prepareGUI(){
+        frame=new JFrame();
+        frame.setTitle("Text to Speech");
+        frame.getContentPane().setLayout(null);
+        frame.getContentPane().setBackground(Color.black);
+        frame.setSize(350,350);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+    public void addComponents(){
+        //Setting property of JTextArea
+        textArea.setBounds(20,40,300,150);
+        textArea.setFont(new Font("Arial",Font.BOLD,20));
+        textArea.setBackground(new Color(229, 199, 229));
+        textArea.setForeground(Color.black);
+        frame.add(textArea);
+
+        //Setting property of Speak Button
+        speakButton.setBounds(70,220,100,30);
+        speakButton.setBackground(new Color(244, 101, 65));
+        speakButton.setForeground(Color.black);
+        speakButton.setFont(new Font("Arial",Font.BOLD,15));
+        frame.add(speakButton);
+
+        //Setting property of Clear Button
+        clearButton.setBounds(180,220,100,30);
+        clearButton.setBackground(new Color(244,101,65));
+        clearButton.setForeground(Color.black);
+        clearButton.setFont(new Font("Arial",Font.BOLD,15));
+        frame.add(clearButton);
+    }
+}

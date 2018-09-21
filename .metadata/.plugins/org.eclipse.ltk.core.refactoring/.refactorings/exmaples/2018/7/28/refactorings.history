@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;exmaples.exstring.main().read&apos; in &apos;exmaples.exstring.main()&apos; to field&#x0D;&#x0A;- Original project: &apos;exmaples&apos;&#x0D;&#x0A;- Original element: &apos;exmaples.exstring.main().read&apos;&#x0D;&#x0A;- Field name: &apos;read&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;&#x0D;&#x0A;- Declare field &apos;static&apos;" description="Convert local variable &apos;read&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;exmaples{exstring.java" name="read" selection="208 29" stamp="1531575587130" static="true" version="1.0" visibility="2"/>
+</session>

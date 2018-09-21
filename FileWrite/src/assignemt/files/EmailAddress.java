@@ -1,0 +1,109 @@
+package assignemt.files;
+	/*import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+	import java.io.IOException;
+	import java.io.LineNumberReader;
+	public class  EmailAddress
+	{
+	    public static void main(String[] args)
+	    {	
+	    try{
+	    		File file =new File("D:Felight.txt");
+	    			int count=0;
+	    			FileReader filereader = new FileReader(file);
+	    		    LineNumberReader line = new LineNumberReader(filereader);
+	    		    BufferedReader fis =new BufferedReader(filereader);
+	    		      byte[] bytesArray = new byte[(int)file.length()];
+	    		      fis.readLine();
+	    		      String s = new String(bytesArray);
+	    		      String [] data = s.split(" ");
+	    		      for (int i=0; i<data.length; i++) {
+	    		         count++;
+	    		      }
+	    		      System.out.println("Number of characters in the given file are " +count);
+	    		    int linenumber = 0;
+	    		    while (line.readLine() != null){
+	    	        	linenumber++;
+	    	            }
+	    	 
+	    	            System.out.println("Total number of lines : " + linenumber);
+	    	 
+	    	            line.close();    
+	    		
+	    	}catch(IOException e){
+	    		e.printStackTrace();
+	    	}
+		
+	    }
+	}*/
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+ 
+public class EmailAddress 
+{   
+    public static void main(String[] args) 
+    {
+    	BufferedReader reader=null;
+    		int charCount = 0;
+    		int wordCount = 0;
+    		int lineCount = 0;
+    		int wordCount1=0;
+    		int paragraphCount = 0;
+         try
+        {
+            reader = new BufferedReader(new FileReader("D:Felight.txt"));
+             String currentLine = reader.readLine();
+            while((currentLine = reader.readLine()) != null) 
+             { 
+            	//while((currentLine=reader.readLine()) != null{
+            		paragraphCount++;
+            	
+            	  
+                 /*if(currentLine.equals("")) 
+                 { 
+                     
+                 } */
+             
+               while (currentLine != null)
+            { 
+                lineCount++;
+                
+              String[] words = currentLine.split(" ");
+                wordCount = wordCount + words.length;
+                wordCount1 = wordCount1 + words.length-1;
+                for (String word : words)
+                {
+                    charCount = charCount + word.length();
+                }
+                
+                currentLine = reader.readLine();
+            }
+        }
+            System.out.println("Chars In A File : "+charCount);
+            System.out.println(" Words In A File : " +wordCount);
+            System.out.println(" spaces In A File : " +wordCount1);
+            System.out.println(" paragraph In A File : " +paragraphCount);
+            System.out.println("Lines In A File : "+lineCount);
+         }
+        
+        catch (IOException e) 
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                reader.close();         
+            }
+            catch (IOException e) 
+            {
+                e.printStackTrace();
+            }
+        }
+    }    
+}
+
+

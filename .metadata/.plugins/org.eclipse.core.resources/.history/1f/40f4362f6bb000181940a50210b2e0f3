@@ -1,0 +1,11 @@
+package threads;
+
+public class ThreadDemo {
+	public static void main(String[] args) {
+		System.out.println("Task1");
+		System.out.println("Task2");
+		BubbleSort.bubbleSort(Calculator.generatorArray(100000));
+		System.out.println("task4");
+	}
+
+}

@@ -1,0 +1,6 @@
+1537320983375	Delete element
+1537365719873	Convert local variable 'scan' to field
+1537365724916	Convert local variable 'ch' to field
+1537365742568	Encapsulate field 'ch'
+1537370070978	Convert local variable 'arr' to field
+1537370110273	Encapsulate field 'ch'

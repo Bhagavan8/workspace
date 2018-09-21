@@ -1,0 +1,22 @@
+package Strings;
+
+public class StringTest {
+public static void main(String[] args) {
+	String str1="Bhagavan";
+	String str2="felight";
+	String str3="felight";
+	String str4=new String("Bhagavan");
+	if(str2==str3){
+		System.out.println("true");
+	}else{
+		System.out.println("false");
+	}
+	if(str1==str4){
+		System.out.println("true");
+	}else{
+		System.out.println("false");
+	}
+	
+	
+}
+}
